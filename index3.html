@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Курсы по флористике</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="glad.jpg" />
+</head>
+
+<body>
+  <header id="header" class="header bg-light py-3">
+    <div>
+      <h1 id="up" class="header-title">Флористика</h1>
+    </div>
+  </header>
+
+  <header class="second-header text-center py-3">
+    <h1 class="second-header-title">Цветы – это язык, на котором говорит красота</h1>
+  </header>
+  <header class="navigation bg-light py-3">
+    <nav class="container">
+      <ul class="nav flex-column flex-sm-row justify-content-center">
+        <li class="nav-item mx-2"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="index2.html">О курсе</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="index3.html">Тест на флориста</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="index4.html">Записаться на курс</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="index5.html">Каталог</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="index6.html">Лучшие клиенты</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <h1>
+    Вычисление магического Z
+  </h1>
+  <div class="form-container">
+    <label for="x">
+      Введите X:
+    </label>
+    <input id="x" placeholder="Введите X" type="text" />
+    <label for="y">
+      Введите Y:
+    </label>
+    <input id="y" placeholder="Введите Y" type="text" />
+    <button id="calculateButton">
+      Вычислить
+    </button>
+    <button id="sendData" style="margin-top: 20px;">
+      Отправить
+    </button>
+  </div>
+  <div id="result">
+  </div>
+  <script>
+    let calculationData = null;
+
+    document.getElementById("calculateButton").addEventListener("click", function () {
+      const xInput = document.getElementById("x").value;
+      const yInput = document.getElementById("y").value;
+
+
+      const x = parseFloat(xInput);
+      const y = parseFloat(yInput);
+
+      if (isNaN(x) || isNaN(y)) {
+        document.getElementById("result").textContent = "Пожалуйста, введите корректные вещественные числа для X и Y!";
+        return;
+      }
+
+
+      let z;
+      let formula;
+      if (x > y) {
+        z = Math.pow(x, y);
+        formula = "Z = X^Y";
+      } else {
+        z = Math.log(x + y);
+        formula = "Z = ln(X + Y)";
+      }
+
+
+      calculationData = {
+        x: x,
+        y: y,
+        z: z,
+        formula: formula
+      };
+
+
+      document.getElementById("result").textContent = `Результат Z: ${z}`;
+    });
+
+    document.getElementById("sendData").addEventListener("click", function () {
+      if (!calculationData) {
+        alert("Сначала выполните вычисление, чтобы отправить данные.");
+        return;
+      }
+
+
+      const queryString = new URLSearchParams({
+        formulation: "Вычислить Z по формуле. Если X > Y, Z = X^Y, иначе Z = ln(X + Y).",
+        x: calculationData.x,
+        y: calculationData.y,
+        z: calculationData.z,
+        result: `Результат: ${calculationData.z}`
+      }).toString();
+
+
+      window.location.href = `https://www.bing.com/search?q=search&${queryString}`;
+    });
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-ENjdO4Dr2bkBIFxQpeooxA7pr53XZPri6sB1Ynx4YqxHAsYBjixy1XBOm87hLz9/"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+
+</html>

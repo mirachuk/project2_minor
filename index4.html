@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курсы по флористике</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="glad.jpg" />
+</head>
+
+<body>
+    <header id="header" class="header bg-light py-3">
+        <div>
+            <h1 id="up" class="header-title">Флористика</h1>
+        </div>
+    </header>
+
+    <header class="second-header text-center py-3">
+        <h1 class="second-header-title">Цветы – это язык, на котором говорит красота</h1>
+    </header>
+    <header class="navigation bg-light py-3">
+        <nav class="container">
+            <ul class="nav flex-column flex-sm-row justify-content-center">
+                <li class="nav-item mx-2"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="index2.html">О курсе</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="index3.html">Тест на флориста</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="index4.html">Записаться на курс</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="index5.html">Каталог</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="index6.html">Лучшие клиенты</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <h3 align="center" class="page-frame">
+        ура таблица
+    </h3>
+    <table align="center" background="tablefortable.jpg" border="2" cellpadding="10" cellspacing="0">
+        <tbody>
+            <tr>
+                <td bgcolor="pink" colspan="3" height="50px">
+                    это таблица.
+                </td>
+            </tr>
+            <tr>
+                <td height="200px">
+                    Меню
+                </td>
+                <td width="300px">
+                    <a href="nadya.png">
+                        <img src="nadya.png" width="200" />
+                    </a>
+                </td>
+                <td>
+                    Дополнительная информация
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" height="100px">
+                    вау, у меня получилось создать таблицу на сайте, Надежда Антоновна молодец!
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 class="course-title">
+        Отправляйте нам свои личные данные
+        <form action="https://www.google.ru/?hl=ru" class="form" method="get" target="_blank">
+            <label for="lastname">
+                Фамилия
+            </label>
+            <input name="surname" type="text" />
+            <label for="name">
+                Имя
+            </label>
+            <input name="name" type="text" />
+            <label for="groupnumber">
+                Номер группы
+            </label>
+            <input name="groupnumber" type="number" />
+            <label for="email">
+                E-mail
+            </label>
+            <input name="email" type="email" />
+            <label for="date">
+                Дата отправки
+            </label>
+            <input name="data" type="date" />
+            <button type="submit">
+                Отправить данные
+            </button>
+        </form>
+        <h2 class="course-title">
+            А теперь оригинальные
+            <form action="https://www.google.ru/?hl=ru" class="form" method="get" target="_blank">
+                <p>
+                    Укажите Ваш пол:
+                    <input name="gender" type="Radio" value="female" />
+                    Женский
+                    <input name="gender" type="Radio" value="male" />
+                    Мужской
+                </p>
+                <p>
+                    Опыт во флористике:
+                    <input name="experience" type="Checkbox" value="10" />
+                    0 лет
+                    <input name="experience" type="Checkbox" value="20" />
+                    больше года
+                    <input name="experience" type="Checkbox" value="30" />
+                    всю жизнь
+                </p>
+                <p>
+                    Кому чаще всего заказываете цветы?
+                    <select name="who">
+                        <option value="friends">
+                            маме
+                        </option>
+                        <option value="relatives">
+                            сестре
+                        </option>
+                        <option value="unknown">
+                            себе
+                        </option>
+                    </select>
+                </p>
+                <p>
+                    Можете использовать как личный дневник:
+                    <br />
+                    <textarea cols="60" name="textarea"
+                        rows="4"> вот бы написать что-то прикольное и милое..... </textarea>
+                </p>
+                <p>
+                    Дата рождения :
+                    <input name="user_date" type="date" value="birth_data" />
+                </p>
+                <p>
+                    Пароль:
+                    <input name="password" size="9" type="password" value="123" />
+                </p>
+                <input name="function" type="hidden" value="page" />
+                <input name="page_id" type="hidden" value="2" />
+                <p>
+                    <input name="Reset" type="Reset" value="Обновить" />
+                    <input name="submit" type="Submit" value="Отправить" />
+                </p>
+            </form>
+        </h2>
+    </h2>
+    <script crossorigin="anonymous" integrity="sha384-ENjdO4Dr2bkBIFxQpeooxA7pr53XZPri6sB1Ynx4YqxHAsYBjixy1XBOm87hLz9/"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+        </script>
+</body>
+
+</html>
